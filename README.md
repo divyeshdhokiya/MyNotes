@@ -1,2 +1,2 @@
 # MyNotes
-A simple Manage Notes application using React and Redux.
+A simple App to Manage Personal Notes using React and Redux.
