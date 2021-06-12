@@ -1,12 +1,14 @@
 import * as React from "react";
+
 import Form from "./FormComponent";
 
-export default class EditNoteComponent extends React.PureComponent {
+export default class AddNoteComponent extends React.PureComponent {
   constructor(props) {
     super(props);
+
     this.initialState = {
-      title: this.props.title,
-      detail: this.props.detail
+      title: "",
+      detail: ""
     };
 
     this.state = this.initialState;
@@ -18,18 +20,18 @@ export default class EditNoteComponent extends React.PureComponent {
     });
   };
   setInitialFormData = () => {
-    this.setState({ title: "", detail: "" });
+    this.setState(this.initialState);
   };
 
   render() {
     const { title, detail } = this.state;
     return (
       <Form
-        buttonLabel="Update"
+        buttonLabel="Add"
         title={title}
         detail={detail}
         handleChange={this.handleChange}
-        onSubmit={this.props.handleUpdate}
+        onSubmit={this.props.onSubmit}
         setInitialFormData={this.setInitialFormData}
       />
     );

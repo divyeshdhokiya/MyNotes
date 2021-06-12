@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import NoteHeader from "./NoteHeader.js";
-import NoteBody from "./NoteBody.js";
+
+import NoteHeader from "./NoteHeader";
+import NoteBody from "./NoteBody";
 
 class NotesComponent extends Component {
   render() {

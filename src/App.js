@@ -4,19 +4,19 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { Route, Switch } from "react-router";
 
-import reducers from "./reducers";
+import reducers from "./reducers/index";
 import "./App.css";
-import EditNoteContainer from "./EditNoteContainer";
-import NotesContainer from "./NotesContainer";
+import EditNoteContainer from "./containers/EditNoteContainer";
+import NotesContainer from "./containers/NotesContainer";
 
 const initialState = {
   hasError: false,
   notes: [
     {
       title: "First Note",
-      detail: "First note of an assignment"
-    }
-  ]
+      detail: "First note of an assignment",
+    },
+  ],
 };
 
 let store = createStore(
